@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shield Pest And Lawn | Pest Control &amp; Lawn Care in Provo, UT</title>
+<meta name="description" content="Shield Pest And Lawn is Provo, Utah's affordable, family-operated pest control and lawn care company. Call (801) 471-7040 for a free estimate.">
+<meta property="og:title" content="Shield Pest And Lawn | Pest Control &amp; Lawn Care in Provo, UT">
+<meta property="og:description" content="Utah's most affordable family operated pest and lawn company. Shield your home from pests, and say goodbye to weeds. Free estimates available.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+:root {
+  /* Primary brand color — buttons, links, CTAs, icon fills */
+  --brand-green:       #116dff;
+  --brand-green-dark:  #0051d3;
+  --brand-green-light: #5899ff;
+  --brand-green-tint:  rgba(17,109,255,0.12);
+
+  /* Secondary / accent color — badge text/borders, outline buttons, nav active state */
+  --brand-blue:        #bf4a37;
+  --brand-blue-dark:   #983a2c;
+  --brand-blue-light:  #d57c6e;
+  --brand-blue-tint:   #f5f0f0;
+
+  /* Section alternate background — very light tint of the primary hue */
+  --bg-alt: #f6f7f8;
+
+  /* Dark section backgrounds (gallery, footer) — always very dark for readability.
+     Derived from the primary hue so they stay on-brand, but forced to near-black
+     lightness so a vivid secondary never bleeds into major background areas. */
+  --dark:      #0f1e35;
+  --dark-card: #0f1a2a;
+}
+</style>
+</head>
+<body>
+<!-- ==============================================================
+  PREVIEW OVERLAY — Remove this entire block (from this comment
+  to END PREVIEW OVERLAY) once the site has been purchased and
+  handed off to the client.
+  ============================================================== -->
+<style>
+  #preview-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 14, 26, 0.93);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 24px;
+  }
+  #preview-modal {
+    background: #ffffff;
+    border-radius: 18px;
+    max-width: 560px;
+    width: 100%;
+    padding: 52px 48px 44px;
+    box-shadow: 0 32px 96px rgba(0,0,0,0.55);
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  #preview-modal h2 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 14px;
+    line-height: 1.3;
+  }
+  #preview-modal > p {
+    color: #475569;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+  #preview-modal ul {
+    text-align: left;
+    margin: 0 0 32px;
+    padding-left: 22px;
+    color: #334155;
+    font-size: 0.93rem;
+    line-height: 1.75;
+  }
+  #preview-modal ul li { margin-bottom: 6px; }
+  #preview-close-btn {
+    display: block;
+    width: 100%;
+    background: var(--brand-green, #16a34a);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 36px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+    transition: opacity 0.2s;
+  }
+  #preview-close-btn:hover { opacity: 0.88; }
+  #preview-hint {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0;
+  }
+  #preview-help-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 99998;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--brand-green, #16a34a);
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  #preview-help-btn:hover { opacity: 0.88; transform: scale(1.08); }
+</style>
+
+<div id="preview-overlay" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+  <div id="preview-modal">
+    <h2 id="preview-title">Thank you for taking the time to check out the website I made for your business!</h2>
+    <p>Here are a couple of things to keep in mind while viewing the site:</p>
+    <ul>
+      <li>All images are placeholders and will be changed at your request.</li>
+      <li>All reviews are also placeholders and will be replaced with your real business reviews.</li>
+      <li>Any text will be edited at your request.</li>
+      <li>Any custom build you require will be done at your request.</li>
+    </ul>
+    <button id="preview-close-btn" type="button">View my Site</button>
+    <p id="preview-hint">Press the <strong>?</strong> after viewing your site for more information.</p>
+  </div>
+</div>
+
+<button id="preview-help-btn" type="button" aria-label="View site preview information">?</button>
+
+<script>
+  /* Preview overlay — inline after elements so getElementById works immediately */
+  (function () {
+    var overlay = document.getElementById('preview-overlay');
+    var closeBtn = document.getElementById('preview-close-btn');
+    var helpBtn  = document.getElementById('preview-help-btn');
+    if (!overlay || !closeBtn || !helpBtn) return;
+    closeBtn.addEventListener('click', function () { overlay.style.display = 'none'; });
+    helpBtn.addEventListener('click',  function () { overlay.style.display = 'flex'; });
+  })();
+</script>
+<!-- END PREVIEW OVERLAY -->
+
+
+<header id="navbar">
+  <div class="nav-inner container">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/logo.png" alt="Shield Pest And Lawn logo" style="max-height:50px;width:auto">
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:8014717040" class="nav-cta btn btn-primary">Call (801) 471-7040</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:8014717040" class="btn btn-primary btn-full">Call (801) 471-7040</a>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="hero-bg">
+    <img src="assets/hero.jpg" alt="Shield Pest And Lawn technician treating a Provo, UT home" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <span class="hero-badge">Locally Owned &amp; Operated in Provo, UT</span>
+    <h1>Provo's <span>One-Stop Shop</span> for Pest Control &amp; Lawn Care</h1>
+    <p class="hero-sub">Utah's most affordable family operated pest and lawn company. Save hundreds of dollars each year! Call us to see how we can do the same for you without compromising high quality services!</p>
+    <div class="hero-actions">
+      <a href="tel:8014717040" class="btn btn-primary">Call (801) 471-7040</a>
+      <a href="#contact" class="btn btn-outline-white">Get a Free Estimate</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value"><span class="count" data-target="3">3</span></span>
+        <span class="hero-stat-caption">Services Offered</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value"><span class="count" data-target="11">11</span><span class="unit">+</span></span>
+        <span class="hero-stat-caption">Years Serving Utah</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value"><span class="count" data-target="4.9">4.9</span></span>
+        <span class="hero-stat-caption">Google Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="badge">Our Treatments Include</span>
+      <h2>Full-Service Pest &amp; Lawn Protection</h2>
+      <p>Everything your home and yard need, from one trusted local crew — no compromising on quality.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <h3>Pest Control</h3>
+        <p>Shield your home from pests! Our comprehensive pest control treatments target ants, spiders, rodents, and other common Utah invaders — inside and out — so your family can enjoy a pest-free home year-round.</p>
+      </div>
+      <div class="service-card reveal delay-1">
+        <h3>Lawn Care &amp; Weed Control</h3>
+        <p>Goodbye weeds, hello green! Our lawn programs feed your grass, choke out weeds, and build a thicker, greener lawn season after season — the kind of yard your neighbors notice.</p>
+      </div>
+      <div class="service-card reveal delay-2">
+        <h3>Mosquito Control</h3>
+        <p>Take your backyard back from mosquitoes. Our seasonal mosquito treatments knock down populations at the source so you can actually enjoy your patio, deck, and yard all summer long.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-img-wrap reveal">
+      <img src="assets/about.jpg" alt="Shield Pest And Lawn technician servicing a Provo area yard" loading="lazy">
+    </div>
+    <div class="about-content reveal delay-1">
+      <span class="badge">About Shield Pest And Lawn</span>
+      <h2>Your One Stop Shop For Pest Control and Lawn Care</h2>
+      <p>Proudly serving Utah since 2015, Shield Pest And Lawn is Utah's most affordable family operated pest and lawn company.</p>
+      <p>Shield your home from pests! Goodbye weeds, hello green! We built our business on doing both jobs right — under one roof, with one phone call — so homeowners don't have to juggle separate pest and lawn companies.</p>
+      <p>Save hundreds of dollars each year! Call us to see how we can do the same for you without compromising high quality services!</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head light reveal">
+      <span class="badge">Our Work</span>
+      <h2>See Shield In Action</h2>
+      <p>A look at the kind of pest control and lawn care service Provo homeowners can expect from our team.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-idx="0">
+        <img src="assets/gallery-photos/gallery-00.jpg" alt="Pest control technician inspecting a residential property" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-1" data-idx="1">
+        <img src="assets/gallery-photos/gallery-01.jpg" alt="Lush green lawn after professional lawn care treatment" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-2" data-idx="2">
+        <img src="assets/gallery-photos/gallery-02.jpg" alt="Technician applying weed control treatment to a lawn" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal" data-idx="3">
+        <img src="assets/gallery-photos/gallery-03.jpg" alt="Close-up of healthy green grass blades" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-1" data-idx="4">
+        <img src="assets/gallery-photos/gallery-04.jpg" alt="Professional lawn care crew at work" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-2" data-idx="5">
+        <img src="assets/gallery-photos/gallery-05.jpg" alt="Pest control spray equipment used for home treatments" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal" data-idx="6">
+        <img src="assets/gallery-photos/gallery-06.jpg" alt="Front yard landscaping with well-maintained lawn" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-1" data-idx="7">
+        <img src="assets/gallery-photos/gallery-07.jpg" alt="Technician treating perimeter of a home for pests" loading="lazy" />
+      </div>
+      <div class="gallery-item reveal delay-2" data-idx="8">
+        <img src="assets/gallery-photos/gallery-08.jpg" alt="Backyard lawn treated for mosquito control" loading="lazy" />
+      </div>
+    </div>
+    <div class="gallery-footer">
+      <button type="button" class="btn btn-outline-white" id="galleryViewMore">View More Photos</button>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+    <div class="lb-img-wrap"><img src="" alt="" id="lbImg" /></div>
+    <button class="lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="badge">Google Reviews</span>
+      <h2>What Our Customers Say</h2>
+      <div class="overall-rating">
+        <div class="big-stars">★★★★★</div>
+        <div class="rating-info">
+          <span class="rating-num">4.9</span>
+          <span class="rating-label">Average Google Rating</span>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div class="reviewer-avatar" style="--av-color:#048d46">MT</div>
+          <div class="reviewer-meta">
+            <strong>Megan Turner</strong>
+            <span>Local Guide · 24 reviews</span>
+          </div>
+          <svg class="google-g" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-body">
+          <p class="review-text">We switched to Shield after getting quotes all over Provo and they were by far the most affordable. Our lawn had a bad weed problem last spring and after two treatments it's completely turned around — thick, green, no more dandelions. Tech was on time and explained everything he was doing.</p>
+          <button class="review-toggle" type="button" hidden>See more</button>
+        </div>
+        <time>2 weeks ago</time>
+      </div>
+      <div class="review-card reveal delay-1">
+        <div class="review-top">
+          <div class="reviewer-avatar" style="--av-color:#1870ab">DR</div>
+          <div class="reviewer-meta">
+            <strong>Dave Ramirez</strong>
+            <span>9 reviews</span>
+          </div>
+          <svg class="google-g" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-body">
+          <p class="review-text">Had a spider problem in the garage and around the eaves. Shield came out fast, treated inside and out, and even did a follow up a few weeks later at no extra charge when I called to ask about a couple stragglers. Family owned and it shows — very personable, not a big corporate feel at all.</p>
+          <button class="review-toggle" type="button" hidden>See more</button>
+        </div>
+        <time>4 months ago</time>
+      </div>
+      <div class="review-card reveal delay-2">
+        <div class="review-top">
+          <div class="reviewer-avatar" style="--av-color:#8b5a2b">SK</div>
+          <div class="reviewer-meta">
+            <strong>Sarah Kimball</strong>
+            <span>Local Guide · 41 reviews · 12 photos</span>
+          </div>
+          <svg class="google-g" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-body">
+          <p class="review-text">We bundled mosquito control with our regular pest service for our backyard in Provo and it made a huge difference for our kids' birthday party in June. Barely saw a mosquito all evening. Price was better than the last two companies we used combined. Highly recommend Shield.</p>
+          <button class="review-toggle" type="button" hidden>See more</button>
+        </div>
+        <time>a year ago</time>
+      </div>
+    </div>
+    <div class="reviews-footer">
+      <a href="https://www.google.com/maps/search/Shield+Pest+And+Lawn" target="_blank" rel="noopener" class="btn btn-google">
+        <svg class="google-g" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Leave Us a Review
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="badge">Get In Touch</span>
+      <h2>Get Your Free Estimate</h2>
+      <p>Call, email, or send us a message below and we'll get right back to you with a free, no-obligation quote.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="ci-icon">&#128222;</div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:8014717040">(801) 471-7040</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#9993;</div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:info@shieldpestandlawn.com">info@shieldpestandlawn.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">&#128337;</div>
+          <div>
+            <strong>Hours</strong>
+            <span>Mon–Fri: 8am–6pm<br>Sat: 9am–4pm<br>Sun: Closed</span>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://maps.google.com/maps?q=+&t=&z=11&ie=UTF8&iwloc=&output=embed" width="100%" height="260" style="border:0" allowfullscreen="" loading="lazy" title="Shield Pest And Lawn service area map"></iframe>
+        </div>
+      </div>
+      <form class="contact-form reveal delay-1" action="#" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(801) 555-0123" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option>Pest Control</option>
+            <option>Lawn Care &amp; Weed Control</option>
+            <option>Mosquito Control</option>
+            <option>Not Sure / General Question</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your home and what you're looking for..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Request My Free Estimate</button>
+        <p class="form-success" hidden>Thanks! We've received your message and will be in touch shortly.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Shield Pest And Lawn logo" style="max-height:60px;width:auto;margin-bottom:8px">
+        <p>Utah's most affordable family operated pest and lawn company. Proudly serving Utah since 2015.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-hours">
+        <h4>Business Hours</h4>
+        <table>
+          <tr><td>Mon–Fri</td><td>8:00am – 6:00pm</td></tr>
+          <tr><td>Saturday</td><td>9:00am – 4:00pm</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+      <div class="footer-cta-box">
+        <h4>Ready to get started?</h4>
+        <p>Call us today for your free, no-obligation estimate.</p>
+        <a href="tel:8014717040" class="btn btn-primary">Call (801) 471-7040</a>
+        <a href="#contact" class="btn btn-outline-white">Get a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shield Pest And Lawn — All rights reserved.</p>
+      <p>Serving Provo, UT &amp; surrounding areas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
